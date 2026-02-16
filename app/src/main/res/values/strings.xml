@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Veterinaria App V4</string>
+
+    <!-- Login -->
+    <string name="login_title">Inicio de Sesión</string>
+    <string name="login_usuario">Usuario o Email</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="login_button">INICIAR SESIÓN</string>
+
+    <!-- Registro -->
+    <string name="registro_title">Registrar Mascota</string>
+    <string name="registro_datos_mascota">Datos de la Mascota</string>
+    <string name="registro_datos_dueno">Datos del Dueño</string>
+    <string name="registro_nombre">Nombre de la mascota</string>
+    <string name="registro_especie">Especie</string>
+    <string name="registro_edad">Edad (años)</string>
+    <string name="registro_peso">Peso (kg)</string>
+    <string name="registro_nombre_dueno">Nombre completo</string>
+    <string name="registro_telefono">Teléfono</string>
+    <string name="registro_email">Email</string>
+    <string name="registro_button">REGISTRAR MASCOTA</string>
+
+    <!-- Listados -->
+    <string name="listado_title">Listados</string>
+    <string name="listado_tab_mascotas">🐾 Mascotas</string>
+    <string name="listado_tab_consultas">📋 Consultas</string>
+    <string name="listado_empty_mascotas">No hay mascotas registradas</string>
+    <string name="listado_empty_consultas">No hay consultas registradas</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_delete_title">Confirmar Eliminación</string>
+    <string name="dialog_delete_message">¿Está seguro que desea eliminar este elemento?</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_confirm">Eliminar</string>
+    <string name="dialog_save">Guardar</string>
+    <string name="dialog_ok">Aceptar</string>
+
+    <!-- Accesibilidad -->
+    <string name="content_description_logo">Logo de la veterinaria</string>
+    <string name="content_description_back">Volver atrás</string>
+    <string name="content_description_edit">Editar</string>
+    <string name="content_description_delete">Eliminar</string>
+    <string name="content_description_share">Compartir</string>
+
+    <!-- Mensajes -->
+    <string name="mensaje_registro_exitoso">Mascota registrada correctamente</string>
+    <string name="mensaje_eliminado_exitoso">Elemento eliminado correctamente</string>
+    <string name="mensaje_error_general">Ha ocurrido un error. Intente nuevamente</string>
+    <string name="mensaje_sin_conexion">Sin conexión a internet</string>
+    <string name="mensaje_cargando">Cargando datos…</string>
+</resources>

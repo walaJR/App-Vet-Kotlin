@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardMascota"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Emoji/Icon -->
+        <TextView
+            android:id="@+id/iconMascota"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="🐕"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:background="@drawable/circle_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Nombre -->
+        <TextView
+            android:id="@+id/tvNombreMascota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Firulais"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="12dp"
+            app:layout_constraintTop_toTopOf="@id/iconMascota"
+            app:layout_constraintStart_toEndOf="@id/iconMascota"
+            app:layout_constraintEnd_toStartOf="@id/btnEditMascota" />
+
+        <!-- Especie -->
+        <TextView
+            android:id="@+id/tvEspecieMascota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Especie: Perro"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginStart="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreMascota"
+            app:layout_constraintStart_toEndOf="@id/iconMascota"
+            app:layout_constraintEnd_toStartOf="@id/btnEditMascota" />
+
+        <!-- Botón Editar -->
+        <ImageButton
+            android:id="@+id/btnEditMascota"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Editar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDeleteMascota" />
+
+        <!-- Botón Eliminar -->
+        <ImageButton
+            android:id="@+id/btnDeleteMascota"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Eliminar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Edad -->
+        <TextView
+            android:id="@+id/tvEdadMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edad: 3 años"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/iconMascota"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Peso -->
+        <TextView
+            android:id="@+id/tvPesoMascota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso: 15.5 kg"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@id/tvEdadMascota"
+            app:layout_constraintStart_toEndOf="@id/tvEdadMascota" />
+
+        <!-- Dueño -->
+        <TextView
+            android:id="@+id/tvDuenoMascota"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Dueño: Juan Pérez"
+            android:textSize="13sp"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="italic"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvEdadMascota"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
