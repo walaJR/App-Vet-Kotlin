@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Veterinaria App V4</string>
+    <string name="app_version">Versión 5.0</string>
+    <string name="app_description">Sistema de Gestión Veterinaria</string>
 
     <!-- Login -->
     <string name="login_title">Inicio de Sesión</string>
@@ -50,4 +52,5 @@
     <string name="mensaje_error_general">Ha ocurrido un error. Intente nuevamente</string>
     <string name="mensaje_sin_conexion">Sin conexión a internet</string>
     <string name="mensaje_cargando">Cargando datos…</string>
+
 </resources>

@@ -24,7 +24,7 @@ class ListadoViewModel(application: Application) : AndroidViewModel(application)
     private val repository = VeterinariaRepositoryRoom.getInstance(application)
     private val TAG = "ListadoViewModel"
 
-    // Usar WeakReference para evitar memory leaks con el contexto
+
     private var contextRef: WeakReference<Context>? = null
 
     private val _mascotas = MutableStateFlow<List<Mascota>>(emptyList())
@@ -144,12 +144,8 @@ class ListadoViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    /**
-     * Usar ApplicationContext en lugar de Activity Context
-     * para evitar memory leaks
-     */
+
     fun compartirConsulta(context: Context, consulta: Consulta) {
-        // Guardar referencia débil al contexto
         contextRef = WeakReference(context.applicationContext)
 
         viewModelScope.launch(Dispatchers.Default) {
@@ -212,9 +208,6 @@ class ListadoViewModel(application: Application) : AndroidViewModel(application)
         """.trimIndent()
     }
 
-    /**
-     * Limpiar recursos al destruirse el ViewModel
-     */
     override fun onCleared() {
         super.onCleared()
         contextRef?.clear()

@@ -33,7 +33,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch {
             _isLoading.value = true
 
-            // Observar datos en tiempo real
             launch {
                 repository.totalMascotas.collect { total ->
                     _totalMascotas.value = total

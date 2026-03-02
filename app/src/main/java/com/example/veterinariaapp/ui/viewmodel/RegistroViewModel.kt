@@ -85,7 +85,6 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
             try {
                 Log.d(TAG, "Iniciando registro de mascota: ${_nombre.value}")
 
-                // Validar que los campos no estén vacíos
                 if (_nombre.value.isBlank()) {
                     throw IllegalArgumentException("El nombre de la mascota es requerido")
                 }
@@ -128,17 +127,15 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
                 _progress.value = 0.4f
                 Log.d(TAG, "Validaciones completadas")
 
-                // Simular procesamiento de datos
                 delay(500)
                 _progress.value = 0.6f
 
-                // Verificar si el dueño ya existe (operación IO)
                 val duenoExistente = withContext(Dispatchers.IO) {
                     repository.obtenerDuenoPorEmail(dueno.email)
                 }
                 Log.d(TAG, "Dueño verificado: ${duenoExistente?.nombre ?: "Nuevo"}")
 
-                // Crear objeto mascota
+                // Creamos objeto mascota
                 val mascota = Mascota(
                     nombre = _nombre.value.trim(),
                     especie = _especie.value,
@@ -149,7 +146,7 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
 
                 _progress.value = 0.8f
 
-                // Registrar en base de datos (operación IO)
+                // Registramos en base de datos (operación IO)
                 val mascotaId = withContext(Dispatchers.IO) {
                     repository.registrarMascotaConDueno(mascota)
                 }
@@ -181,9 +178,6 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    /**
-     * Operación en segundo plano con Coroutines (sobrecarga original)
-     */
     fun registrarMascota(
         nombre: String,
         especie: String,
@@ -206,12 +200,12 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
 
                 _progress.value = 0.2f
 
-                // Simular procesamiento de datos
+                // Simulamos procesamiento de datos
                 delay(500)
                 _progress.value = 0.4f
                 Log.d(TAG, "Validaciones completadas")
 
-                // Verificar si el dueño ya existe (operación IO)
+                // Verificamos si el dueño ya existe (operación IO)
                 val duenoExistente = withContext(Dispatchers.IO) {
                     repository.obtenerDuenoPorEmail(dueno.email)
                 }
@@ -219,7 +213,7 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
                 _progress.value = 0.6f
                 Log.d(TAG, "Dueño verificado: ${duenoExistente?.nombre ?: "Nuevo"}")
 
-                // Crear objeto mascota
+                // Creamos objeto mascota
                 val mascota = Mascota(
                     nombre = nombre,
                     especie = especie,
@@ -230,7 +224,7 @@ class RegistroViewModel(application: Application) : AndroidViewModel(application
 
                 _progress.value = 0.8f
 
-                // Registrar en base de datos (operación IO)
+                // Registramos en base de datos (operación IO)
                 val mascotaId = withContext(Dispatchers.IO) {
                     repository.registrarMascotaConDueno(mascota)
                 }
